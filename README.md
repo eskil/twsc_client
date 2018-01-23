@@ -19,3 +19,17 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/twsc_client](https://hexdocs.pm/twsc_client).
 
+# CLI
+
+```
+mix escript.build
+```
+
+```
+./twsc_client reservations --login=<user> --password=<password>
+```
+
+```
+./twsc_client available --login=<user> --password=<password> "
+./twsc_client available --login=<user> --password=<password> --fleet=Gold --start-date="2018-05-01"
+```
