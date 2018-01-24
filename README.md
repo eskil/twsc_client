@@ -54,7 +54,7 @@ IO.inspect(reservations)
 
 You can see available boats.
 
-***Note: this will
+***Note: this output format is simply as is from TWSC.***
 
 ```elixir
 {:ok, session} = TwscClient.login(login, password)
