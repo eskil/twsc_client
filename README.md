@@ -101,8 +101,17 @@ IO.inspect(available)
 }
 ```
 
-Where `first`, and `second` map to the 9am-9pm, 9pm-9am spots. `third`
-seems to always be false.
+Where
+
+  * `first` 9am-9pm
+  * `second` 9am-9pm
+  * `third` 9pm-9am
+
+Basically from trial and error, if the boat has `first` and `second`,
+it's booked 9am-9pm. If it has `first`, `second` and `third`, it's
+booked 9am-9am,
+
+If the boat is only booked 9pm-9am, only `third` is set.
 
 ## CLI
 
