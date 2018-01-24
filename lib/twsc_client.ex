@@ -28,7 +28,6 @@ defmodule TwscClient do
   end
 
   def reservations(session_id) do
-    IO.puts inspect @http_client
     case @http_client.reservations(session_id) do
       %{status_code: 200, body: body} ->
 	Poison.decode(body)
