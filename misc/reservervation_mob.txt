@@ -1,0 +1,64 @@
+GET /app/wsdl/Reservations_Mob.php?callback=mycallback&callback=jQuery17105748621971164793_1515347471173&_=1515347471254 HTTP/1.1
+Host: tradewindssailing.com
+Accept: */*
+Proxy-Connection: keep-alive
+Cookie: userid=eskil; username=Eskil+Olsen; PHPSESSID=4e931aa1368735ccf591e6604c173ad5
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 (4526959488)
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Date: Sun, 07 Jan 2018 17:50:40 GMT
+Server: Apache
+X-Powered-By: PHP/5.6.27
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+2c9
+jQuery17105748621971164793_1515347471173('{"ErrorCode":0,"Message":"These are your reserved boats","Answerkey":[{"boat_mode":"BN31","boat_fleet":"Silver","boat_name":"Megalina","venue_name":"Pt Richmond","slip":"D-2","start_date_time":"Saturday January 13 9am","end_date_time":"Saturday January 13 9pm","begins":"2018-01-13T09:00:00","venue_code":"1","boat_size":"6","boat_code":"3104","boat_info_test":"6"},{"boat_mode":"CT3504","boat_fleet":"Silver","boat_name":"White Wing","venue_name":"Pt Richmond","slip":"D-106","start_date_time":"Saturday February 3 9am","end_date_time":"Saturday February 3 9pm","begins":"2018-02-03T09:00:00","venue_code":"1","boat_size":"6","boat_code":"3504","boat_info_test":"6"}]}')
+0
+
+---
+
+# Poison decoded
+%{"Answerkey" =>
+  [
+    %{
+      "begins" => "2018-01-13T09:00:00",
+      "boat_code" => "3104",
+      "boat_fleet" => "Silver",
+      "boat_info_test" => "6",
+      "boat_mode" => "BN31",
+      "boat_name" => "Megalina",
+      "boat_size" => "6",
+      "end_date_time" => "Saturday January 13 9pm",
+      "slip" => "D-2",
+      "start_date_time" => "Saturday January 13 9am",
+      "venue_code" => "1",
+      "venue_name" => "Pt Richmond"
+    },
+    %{
+      "begins" => "2018-02-03T09:00:00",
+      "boat_code" => "3504",
+      "boat_fleet" => "Silver",
+      "boat_info_test" => "6",
+      "boat_mode" => "CT3504",
+      "boat_name" => "White Wing",
+      "boat_size" => "6",
+      "end_date_time" => "Saturday February 3 9pm",
+      "slip" => "D-106",
+      "start_date_time" => "Saturday February 3 9am",
+      "venue_code" => "1",
+      "venue_name" => "Pt Richmond"
+    }
+  ],
+  "ErrorCode" => 0,
+  "Message" => "These are your reserved boats"
+}

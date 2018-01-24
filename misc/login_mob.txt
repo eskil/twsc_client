@@ -1,0 +1,29 @@
+GET /app/wsdl/Logon-action_Mob.php?userid=eskil&pwd=<password>&callback=myCallBack&callback=jQuery17106935285063911253_1515347328100&_=1515347328619 HTTP/1.1
+Host: tradewindssailing.com
+Accept: */*
+Proxy-Connection: keep-alive
+Cookie: userid=eskil; username=Eskil+Olsen
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 (4526959488)
+Accept-Language: en-us
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Date: Sun, 07 Jan 2018 17:48:17 GMT
+Server: Apache
+X-Powered-By: PHP/5.6.27
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Set-Cookie: PHPSESSID=4e931aa1368735ccf591e6604c173ad5; path=/
+Set-Cookie: userid=eskil; expires=Sat, 07-Apr-2018 17:48:17 GMT; Max-Age=7776000
+Set-Cookie: username=Eskil+Olsen; expires=Sat, 07-Apr-2018 17:48:17 GMT; Max-Age=7776000
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+15e
+jQuery17106935285063911253_1515347328100('{"ErrorCode":0,"Message":"Welcome Eskil Olsen","Answerkey":{"NameFirst":"Eskil","NameLast":"Olsen","Company":null,"Address":"<address>","City":"San Francisco","State":"CA","Zip":"94107","PhoneHome":" ","PhoneWork":" ","PhoneCell":"+1 (415) 555-5555","Email":"your@email.com","EmailOptIn":"yes"}}')
+0
