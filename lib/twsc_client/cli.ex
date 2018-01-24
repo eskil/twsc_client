@@ -12,7 +12,7 @@ defmodule TwscCli do
     [--start-date="YYYY-MM-DD"]
     [--fleet=Copper|Bronze|Silver|Gold|Platinum]
   """
-    
+
   def main(args) do
     args |> parse_args |> process
   end
@@ -21,7 +21,7 @@ defmodule TwscCli do
     IO.puts @moduledoc
     System.halt(0)
   end
-  
+
   defp parse_args(args) do
     {options, args, invalid} = OptionParser.parse(
       args,
@@ -43,7 +43,7 @@ defmodule TwscCli do
   def process({options, ["reservations"], _invalid}) do
     {:ok, session} = TwscClient.login(options[:login], options[:password])
     {:ok, reservations} = TwscClient.reservations(session)
-    IO.puts inspect(reservations)
+    IO.inspect(reservations)
   end
 
   def process({options, ["available"], _invalid}) do
