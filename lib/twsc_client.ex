@@ -28,9 +28,10 @@ defmodule TwscClient do
   end
 
   def reservations(session_id) do
+    IO.puts inspect @http_client
     case @http_client.reservations(session_id) do
       %{status_code: 200, body: body} ->
-	{:ok, Poison.decode(body)}
+	Poison.decode(body)
       response ->
         Logger.warn "[TwscClient] Cannot get reservations"
         Logger.warn "Response #{inspect response}"
@@ -42,10 +43,10 @@ defmodule TwscClient do
     start_date = Keyword.get(options, :start_date,
       Timex.format!(Timex.now, "%Y-%m-%d", :strftime))
     fleet = Keyword.get(options, :fleet, "Silver")
-    
+
     case @http_client.available_boats(session_id, start_date, fleet) do
       %{status_code: 200, body: body} ->
-	{:ok, Poison.decode(body)}
+	Poison.decode(body)
       response ->
         Logger.warn "[TwscClient] Cannot get available boats"
         Logger.warn "Response #{inspect response}"

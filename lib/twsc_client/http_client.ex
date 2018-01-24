@@ -5,7 +5,7 @@ defmodule TwscClient.HttpClient do
   defp process_url(url) do
     "http://www.tradewindssailing.com" <> url
   end
-    
+
   def login(username, password) do
     HttpClient.get!(
       "/app/wsdl/Logon-action_Mob.php",
