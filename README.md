@@ -19,6 +19,14 @@ Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_do
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at [https://hexdocs.pm/twsc_client](https://hexdocs.pm/twsc_client).
 
+## Configuration
+
+```elixir
+config :twsc_client, default_fleet: "Copper"
+```
+
+Fleet defaults to "Silver" otherwise.
+
 ## Examples
 
 You can read reservations.

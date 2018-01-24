@@ -47,14 +47,8 @@ defmodule TwscCli do
   end
 
   def process({options, ["available"], _invalid}) do
-    today = Timex.format!(Timex.now, "%Y-%m-%d", :strftime)
-    fleet = "Silver"
     {:ok, session} = TwscClient.login(options[:login], options[:password])
-    {:ok, available} = TwscClient.available_boats(session,
-      [
-        start_date: Keyword.get(options, :start_date, today),
-        fleet: Keyword.get(options, :fleet, fleet)
-      ])
+    {:ok, available} = TwscClient.available_boats(session, options)
     IO.inspect(available)
   end
 

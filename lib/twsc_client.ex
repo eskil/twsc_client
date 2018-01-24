@@ -6,6 +6,7 @@ defmodule TwscClient do
   require Logger
 
   @http_client Application.get_env(:twsc_client, :http_client) || TwscClient.HttpClient
+  @default_fleet Application.get_env(:twsc_client, :default_fleet) || "Silver"
 
   @doc """
   Login using the given name and password, which are TWSC reservations system credentials.
@@ -41,7 +42,7 @@ defmodule TwscClient do
   def available_boats(session_id, options \\ []) do
     start_date = Keyword.get(options, :start_date,
       Timex.format!(Timex.now, "%Y-%m-%d", :strftime))
-    fleet = Keyword.get(options, :fleet, "Silver")
+    fleet = Keyword.get(options, :fleet, @default_fleet)
 
     case @http_client.available_boats(session_id, start_date, fleet) do
       %{status_code: 200, body: body} ->
